@@ -3,6 +3,7 @@ package com.ideasoft.utils;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.ideasoft.model.ElementInfo;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -20,13 +21,13 @@ import org.openqa.selenium.By;
 
 public class ElementHelper {
 
-    private ConcurrentHashMap<String, ElementInfo> elementMapList;
+    private final ConcurrentHashMap<String, ElementInfo> elementMapList;
 
     public ElementHelper() {
         elementMapList = new ConcurrentHashMap<>();
     }
 
-    public void initMap(List<File> fileList) throws FileNotFoundException {
+    public void initMap(List<File> fileList) {
         Type elementType = new TypeToken<List<ElementInfo>>() {
         }.getType();
         Gson gson = new Gson();
@@ -60,12 +61,16 @@ public class ElementHelper {
 
     public By getElementInfoBy(ElementInfo elementInfo) {
         By by = null;
-        if (elementInfo.getType().equals("css")) {
-            by = By.cssSelector(elementInfo.getValue());
-        } else if (elementInfo.getType().equals("xpath")) {
-            by = By.xpath(elementInfo.getValue());
-        } else if (elementInfo.getType().equals("id")) {
-            by = By.id(elementInfo.getValue());
+        switch (elementInfo.getType()) {
+            case "css":
+                by = By.cssSelector(elementInfo.getValue());
+                break;
+            case "xpath":
+                by = By.xpath(elementInfo.getValue());
+                break;
+            case "id":
+                by = By.id(elementInfo.getValue());
+                break;
         }
         return by;
     }

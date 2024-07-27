@@ -21,8 +21,6 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.TimeUnit;
 
 
@@ -60,8 +58,6 @@ public class BaseTest {
     String selectPlatform = "mac";
     String testUrl = "https://testcase.myideasoft.com/";
 
-    ConcurrentMap<String, Object> elementMapList = new ConcurrentHashMap<>();
-
     public ChromeOptions chromeOptions() { //chrome tarayıcısının ayarlarını özelleştirilmesi
         chromeOptions = new ChromeOptions();
         capabilities = DesiredCapabilities.chrome(); // chrome için özel yetenekler oluşturur
@@ -71,7 +67,6 @@ public class BaseTest {
         chromeOptions.addArguments("--ignore-certificate-errors");
         chromeOptions.addArguments("--kiosk"); // tarayıcıyı tam ekran boyutunda başlatır
         chromeOptions.addArguments("--disable-notifications"); // web bildirimlerini devre dışı bırakır
-        //chromeOptions.addArguments("--start-fullscreen");
         System.setProperty("webdriver.chrome.driver", "web_driver/chromedriver"); //Selenium'un chrome tarayıcısını kontrol etmesi için, zorunlu
         chromeOptions.merge(capabilities); //DesiredCapalities nesnesini ChromeOptions ile birleştirir.
         return chromeOptions;

@@ -20,7 +20,6 @@ public class FrontendSteps extends BaseTest {
 
     }
 
-
     WebElement findElement(String key) {
 
         By by = getElementInfoBy(findElementInfoByKey(key));
@@ -76,7 +75,7 @@ public class FrontendSteps extends BaseTest {
     }
 
     @Step("<int> saniye bekle")
-    public void waitSecond(int seconds) throws InterruptedException {
+    public void wait(int seconds) {
         try {
             logger.info(seconds + " saniye bekleniyor");
             Thread.sleep(seconds * 1000);
@@ -91,7 +90,6 @@ public class FrontendSteps extends BaseTest {
         Assertions.assertTrue(element.isDisplayed(), " Element disabled değil");
         logger.info(key + " elementi disabled");
     }
-
 
     @Step("<key> elementi <expectedText> değerini içeriyor mu kontrol et")
     public void checkElementEqualsText(String key, String expectedText) {
@@ -127,6 +125,7 @@ public class FrontendSteps extends BaseTest {
         String actualValue = inputElement.getAttribute("value");
         Assertions.assertEquals(expectedValue, actualValue, "Beklenen değerle uyuşmuyor: " + expectedValue);
         System.out.println("Input öğesinin value değeri doğru: " + actualValue);
+
     }
 }
 

@@ -1,5 +1,5 @@
 IdeaSoftAutomationProjectUI
-===========================  
+===========================
 
 Urun Arama ve Sepet Islemleri
 -----------------------------
@@ -11,5 +11,7 @@ tags: urunArama, sepetIslemleri
 * "SEPETİNİZE EKLENMİŞTİR" yazısının görünmesi kontrol edilir.
 * Sepet sayfasına gidilir
 * İlgili üründen "5" adet olduğu kontrol edilir
+
+
 
 

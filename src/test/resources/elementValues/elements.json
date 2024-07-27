@@ -1,67 +1,37 @@
 [
   {
-    "key" : "urunSearch",
-    "value" : "//input[@aria-label='Search']",
-    "type" : "xpath"
-  },{
-    "key" : "urun",
-    "value" : "//a[@title='Ürün']",
-    "type" : "xpath"
-  },{
-    "key" : "adetSecim5",
-    "value" : "//select[@id='qty-input']/option[@value='5']",
-    "type" : "xpath"
-  },{
-    "key" : "sepeteEkleButonu",
-    "value" : "//a[@class='add-to-cart-button']",
-    "type" : "xpath"
-  },{
-    "key" : "sepetEklemeTextKontrol",
-    "value" : "//div[@class='shopping-information-cart-inside']",
-    "type" : "xpath"
-  },{
-    "key" : "sepetSayfasi",
-    "value" : "//a[@title='Sepet']",
-    "type" : "xpath"
-  },{
-    "key" : "valueSepetKontrol",
-    "value" : "//*[contains(@value, '5')]",
-    "type" : "xpath"
-  },{
-    "key" : "",
-    "value" : "",
-    "type" : ""
-  },{
-    "key" : "",
-    "value" : "",
-    "type" : ""
-  },{
-    "key" : "",
-    "value" : "",
-    "type" : ""
-  },{
-    "key" : "",
-    "value" : "",
-    "type" : ""
-  },{
-    "key" : "",
-    "value" : "",
-    "type" : ""
-  },{
-    "key" : "",
-    "value" : "",
-    "type" : ""
-  },{
-    "key" : "",
-    "value" : "",
-    "type" : ""
+    "key": "urunSearch",
+    "value": "//input[@aria-label='Search']",
+    "type": "xpath"
+  },
+  {
+    "key": "urun",
+    "value": "//a[@title='Ürün']",
+    "type": "xpath"
+  },
+  {
+    "key": "adetSecim5",
+    "value": "//select[@id='qty-input']/option[@value='5']",
+    "type": "xpath"
+  },
+  {
+    "key": "sepeteEkleButonu",
+    "value": "//a[@class='add-to-cart-button']",
+    "type": "xpath"
+  },
+  {
+    "key": "sepetEklemeTextKontrol",
+    "value": "//div[@class='shopping-information-cart-inside']",
+    "type": "xpath"
+  },
+  {
+    "key": "sepetSayfasi",
+    "value": "//a[@title='Sepet']",
+    "type": "xpath"
+  },
+  {
+    "key": "valueSepetKontrol",
+    "value": "//*[contains(@value, '5')]",
+    "type": "xpath"
   }
-
-
-
-
-
-
-
-
 ]
