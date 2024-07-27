@@ -1,0 +1,21 @@
+
+# Arama kısmına <urun> yazılarak arama yapılır
+* "urunSearch" li input alanını bul, <urun> değerini yaz ve ardından Enter'a bas
+
+# Arama sonucunda listelenen ürünün detayına girilir
+* Elementine tıkla "urun"
+
+# İlgili üründen 5 adet sepete eklenir
+* Elementine tıkla "adetSecim5"
+* Elementine tıkla "sepeteEkleButonu"
+
+# <expectedValue> yazısının görünmesi kontrol edilir.
+* "sepetEklemeTextKontrol" elementi <expectedValue> değerini içeriyor mu kontrol et
+
+# Sepet sayfasına gidilir
+* JavaScript ile "sepetSayfasi" elementine tıkla
+
+# İlgili üründen <expectedValue> adet olduğu kontrol edilir
+* "valueSepetKontrol" li input alanını bul ve value değerinin <expectedValue> olduğunu kontrol et
+
+
